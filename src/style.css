@@ -1,21 +1,26 @@
 @font-face {
-  font-family: 'MyFont';
+  font-family: 'Poppins-regular';
   src: url('./Poppins-Regular.ttf') format('truetype');
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('./Poppins-Light.ttf') format('truetype');
+  font-style: normal;
+}
+
 body {
-  font-family: 'MyFont', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins-regular', Arial, Helvetica, sans-serif;
   color: white;
   background-image:
-    linear-gradient(rgba(0, 0, 0, 0),
-      rgba(0, 0, 0, 0.5)), url('the-bear.webp');
+    linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6)), url('the-bear.webp');
   background-repeat: no-repeat;
   background-size: cover;
   margin: 0;
   padding: 0;
   height: 100vh;
-
 }
 
 header {
@@ -25,12 +30,15 @@ header {
 
 .home {
   font-size: 25px;
-  font-weight: bold;
+}
+
+.name {
+  font-family: 'Times New Roman', Times, serif;
 }
 
 button {
   font-size: 16px;
-  font-family: 'MyFont';
+  font-family: 'Poppins-regular';
   padding: 8px 40px;
   background: none;
   border: none;
@@ -53,4 +61,25 @@ nav {
   justify-content: center;
   gap: 50px;
   padding-top: 20px;
+}
+
+#content {
+  font-size: 18px;
+  font-family: 'Poppins-light';
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+p {
+  text-align: left;
+  padding: 20px 600px;
+}
+
+.greeting {
+  font-size: 100px;
+  font-family: 'Poppins-regular';
+  justify-self: center;
 }
