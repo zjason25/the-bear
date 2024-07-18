@@ -4,7 +4,15 @@ const homeBtn = document.querySelector("button.home.name");
 
 homeBtn.addEventListener("click", addHomeContent);
 
+function clearContent() {
+  const content = document.querySelector("#content")
+  while (content.firstChild) {
+    content.removeChild(content.lastChild);
+  }
+}
+
 function addHomeContent() {
+  clearContent();
   const content = document.querySelector("#content")
   let homeContainer = document.createElement("div");
   homeContainer.classList.add("container");
@@ -15,7 +23,7 @@ function addHomeContent() {
 
   let name = document.createElement("div");
   name.classList.add("name");
-  name.innerText = "The Bear";
+  name.innerText = "THE BEAR";
   greeting.appendChild(name);
 
   let message = document.createElement("p");
@@ -29,3 +37,9 @@ function addHomeContent() {
   content.appendChild(homeContainer);
   console.log("created home div");
 }
+
+function startUp() {
+  addHomeContent();
+}
+
+startUp();
