@@ -10,6 +10,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'the-bear';
+  src: url('./HelveticaNeueMedium.otf') format('truetype');
+  font-style: normal;
+}
+
+
 body {
   font-family: 'Poppins-regular', Arial, Helvetica, sans-serif;
   color: white;
@@ -33,7 +40,7 @@ header {
 }
 
 .name {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'the-bear', Times, serif;
 }
 
 button {
