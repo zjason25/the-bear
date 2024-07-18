@@ -16,22 +16,34 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'the-bear-italic';
+  src: url('./HelveticaNeueItalic.ttf') format('truetype');
+  font-style: normal;
+}
+
+:root {
+  --background-home: linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6)), url('the-bear.webp');
+  --background-about: linear-gradient(rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.6)), url('dining-room.jpg');
+}
 
 body {
   font-family: 'Poppins-regular', Arial, Helvetica, sans-serif;
   color: white;
-  background-image:
-    linear-gradient(rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.6)), url('the-bear.webp');
+  background-image: var(--background-home);
+  /*delete later*/
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   margin: 0;
   padding: 0;
   height: 100vh;
 }
 
 header {
-  padding-bottom: 12px;
+  padding-bottom: 50px;
   background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.5), transparent);
 }
 
@@ -39,8 +51,18 @@ header {
   font-size: 25px;
 }
 
-.name {
+.header {
+  font-weight: bold;
+}
+
+.logo {
   font-family: 'the-bear', Times, serif;
+}
+
+.header.logo {
+  font-size: 50px;
+  font-family: 'the-bear-italic';
+  margin-bottom: 5px;
 }
 
 button {
@@ -75,15 +97,41 @@ nav {
   font-family: 'Poppins-light';
 }
 
-.container {
+.home-container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-p {
+.home-container>p {
   width: 30%;
   padding-top: 20px;
+}
+
+.about-container {
+  display: flex;
+  gap: 50px;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.left {
+  align-items: end;
+}
+
+.right {
+  align-items: start;
+}
+
+.left>p,
+.right>p {
+  width: 50%;
+  margin-top: 0;
 }
 
 .greeting {
