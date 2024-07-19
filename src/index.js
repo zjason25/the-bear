@@ -2,10 +2,12 @@ import './style.css';
 
 const homeBtn = document.querySelector("button.home.logo");
 const aboutBtn = document.querySelector("button.navigation.about");
+const menuBtn = document.querySelector("button.navigation.menus");
 
 
 homeBtn.addEventListener("click", addHomeContent);
 aboutBtn.addEventListener("click", addAboutContent);
+menuBtn.addEventListener("click", addMenuContent);
 
 
 function clearContent() {
@@ -142,6 +144,40 @@ function addAboutContent() {
   homeContainer.appendChild(right);
 
   content.appendChild(homeContainer);
+}
+
+function addMenuContent() {
+  clearContent();
+  const root = document.querySelector(':root');
+  const image = getComputedStyle(root).getPropertyValue('--background-menu');
+  document.body.style.backgroundImage = image;
+  const content = document.querySelector("#content")
+
+  const menu_container = document.createElement("div");
+  menu_container.className = "menu-container";
+
+  const menu_header = document.createElement("p");
+  menu_header.textContent = "Dinner Courses";
+  menu_header.className = "menu-header";
+
+  const menu_list = document.createElement("ul");
+
+  let courses = ['MIREPOIX BROTH', 'CAULIFLOWER / SWISS CHARD',
+    'HAMACHI / GRAPEFRUIT', 'RAVIOLO / PEA / PECORINO',
+    'ASPARAGUS / QUAIL EGG / POTATO',
+    'DUCK / APRICOT', 'BEEF TENDERLOIN / CHERRY JUS',
+    'PRINCESS CAKE', 'CHOCOLATE VELOUTE'
+  ]
+
+  for (let i = 0; i < courses.length; i++) {
+    let li = document.createElement('li');
+    li.appendChild(document.createTextNode(courses[i]));
+    menu_list.appendChild(li);
+  }
+
+  menu_container.appendChild(menu_header);
+  menu_container.appendChild(menu_list);
+  content.appendChild(menu_container);
 }
 
 function startUp() {
