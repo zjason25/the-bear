@@ -161,3 +161,52 @@ ul {
   font-family: 'Poppins-regular';
   justify-self: center;
 }
+
+.reservation-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  width: 500px;
+  max-width: 80%;
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.form-header .title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.reservation-form,
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-ui {
+  height: 120px;
+
+}
+
+.submit-reservation {
+  align-self: center;
+}
+
+.submit-reservation button {
+  background-color: #333333;
+}
+
+.form-ui input,
+.form-ui select {
+  height: 50px;
+  font-size: 18px;
+  font-family: 'Poppins-regular';
+  color: gray;
+}

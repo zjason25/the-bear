@@ -184,4 +184,4 @@ function startUp() {
   addHomeContent();
 }
 
-startUp();
+// startUp();

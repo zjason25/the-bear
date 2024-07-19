@@ -18,6 +18,42 @@
   </header>
   <div id="content">
   </div>
+  <form class="reservation-form" action="" method="">
+    <div class="form-header">
+      <div class="title">Reservations</div>
+      <button class="close-button">&times;</button>
+    </div>
+    <div class="form-ui">
+      <label for="seats">
+        <span class="input-label">Number of People
+          <span class="input-label-optional">- Optional</span>
+        </span>
+
+        <select id="seats" name="seats">
+          <option value selected disabled>Number of People</option>
+          <option value="1">1 Person</option>
+          <option value="2">2 People</option>
+          <option value="3">3 People</option>
+          <option value="4">4 People</option>
+          <option value="5">5 People</option>
+          <option value="6">6 People</option>
+          <option value="7">7 People</option>
+          <option value="8">8+ People</option>
+        </select>
+      </label>
+
+      <label for="date">
+        <span class="input-label">Date
+          <span class="input-label-required">- Required</span>
+        </span>
+        <input type="date" id="reservation" name="reservation" placeholder="Date" required>
+      </label>
+    </div>
+
+    <div class="submit-reservation">
+      <button type="button">Find a Table</button>
+    </div>
+  </form>
 
 </body>
 
