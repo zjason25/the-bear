@@ -166,10 +166,15 @@ ul {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
   z-index: 10;
   width: 500px;
   max-width: 80%;
+}
+
+.reservation-form.active {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .form-header {
@@ -208,4 +213,21 @@ label {
   font-size: 18px;
   font-family: 'Poppins-regular';
   color: gray;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
