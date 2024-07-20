@@ -191,8 +191,7 @@ label {
 }
 
 .form-ui {
-  height: 120px;
-
+  margin-bottom: 30px;
 }
 
 .submit-reservation {
