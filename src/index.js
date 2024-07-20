@@ -46,8 +46,6 @@ function addHomeContent() {
   homeContainer.appendChild(greeting);
   homeContainer.appendChild(message);
   content.appendChild(homeContainer);
-
-  console.log("created home div");
 }
 
 function addAboutContent() {
@@ -183,6 +181,9 @@ function addMenuContent() {
 const openModalButtons = document.querySelectorAll("[data-modal-target]");
 const closeModalButtons = document.querySelectorAll("[data-close-button]");
 const overlay = document.getElementById('overlay');
+const reserveButton = document.querySelector("button.confirm-reservation");
+
+reserveButton.addEventListener('click', confirmReservation);
 
 openModalButtons.forEach(button => {
   button.addEventListener('click', () => {
@@ -212,6 +213,12 @@ function closeModal(modal) {
   }
   modal.classList.remove('active');
   overlay.classList.remove('active');
+}
+
+function confirmReservation() {
+  const seats = document.getElementById('seats').value;
+  const date = document.getElementById('reservation').value;
+  alert("Congratulations! You made a reservation with" + seats + " people on " + date);
 }
 
 function startUp() {
