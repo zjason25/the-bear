@@ -210,9 +210,16 @@ label {
 .form-ui input,
 .form-ui select {
   height: 50px;
+  padding-left: 5px;
   font-size: 18px;
   font-family: 'Poppins-regular';
   color: gray;
+}
+
+.input-label-optional,
+.input-label-required {
+  font-style: italic;
+  color: rgb(199, 199, 199);
 }
 
 #overlay {
